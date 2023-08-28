@@ -7,7 +7,12 @@ import { UpDown } from './GeometricShapesSVG/Animations'
 const hiddenlowHeight = 1000
 const hiddenMediumHeight = 2000
 
-export function BackGroundSVG({ colors }: { colors: string[] }) {
+export interface IBackGroundSVGProps {
+  bgColor: string
+  colors: string[]
+}
+
+export function BackGroundSVG({ colors, bgColor }: IBackGroundSVGProps) {
   const [height, setHeight] = useState(0)
 
   useEffect(() => {
@@ -15,7 +20,10 @@ export function BackGroundSVG({ colors }: { colors: string[] }) {
   }, [])
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full pointer-events-none -z-10">
+    <div
+      style={{ backgroundColor: bgColor }}
+      className="absolute top-0 left-0 w-full h-full pointer-events-none -z-10"
+    >
       <UpDown type="normal">
         <SVG colors={colors} icon="triangle" width={4 * 48} stroke left="30%" top="30%" />
         <SVG colors={colors} icon="hexa" width={4 * 48} stroke left="65%" top="95%" />
