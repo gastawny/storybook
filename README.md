@@ -40,6 +40,5 @@ We value your contributions to improve our component library. If you encounter i
 ## Additional Resources
 
 - [Storybook Documentation](https://storybook.js.org/docs): Learn more about how to effectively use Storybook.
-- [Component Style Guide](https://github.com/your-user/component-style-guide): Refer to our style guide to ensure consistency in creating new components.
 
 Thank you for using our component documentation with Storybook! If you have any questions or feedback, don't hesitate to get in touch with us. We look forward to collaborating with you in developing great components!
