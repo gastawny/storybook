@@ -1,15 +1,25 @@
-import { Story, Meta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import { BackgroundCards, IBackgroundCardsProps } from './index'
 
 export default {
-  title: 'Components/BackgroundCards',
+  title: 'Background/BackgroundCards',
   component: BackgroundCards,
-} as Meta
+} as Meta<IBackgroundCardsProps>
 
-const Template: Story<IBackgroundCardsProps> = (args) => <BackgroundCards {...args} />
+type Story = StoryObj<typeof BackgroundCards>
 
-export const Default = Template.bind({})
-Default.args = {
-  bgColor: '#111828',
-  color: '#FFB4BE',
+export const Dark: Story = {
+  args: {
+    bgColor: '#09090b',
+    color: '#FFB4BE',
+    cardColor: '#111828',
+  },
+}
+
+export const Light: Story = {
+  args: {
+    bgColor: '#fff',
+    color: '#FFB4BE',
+    cardColor: '#eee',
+  },
 }

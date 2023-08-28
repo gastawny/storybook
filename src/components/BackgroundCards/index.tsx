@@ -3,14 +3,15 @@ import styled, { keyframes } from 'styled-components'
 export interface IBackgroundCardsProps {
   bgColor: string
   color: string
+  cardColor: string
 }
 
-export function BackgroundCards({ bgColor, color }: IBackgroundCardsProps) {
+export function BackgroundCards(props: IBackgroundCardsProps) {
   const numberOfSpans = 200
   const spans: number[] = Array.from({ length: numberOfSpans }, (_, index) => index)
 
   return (
-    <BackGround bgColor={bgColor} color={color}>
+    <BackGround {...props}>
       {spans.map((number) => (
         <span className="relative block z-20 hover:duration-0" key={number}></span>
       ))}
@@ -32,7 +33,7 @@ const BackGround = styled.div<IBackgroundCardsProps>`
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  background-color: #09090b;
+  background-color: ${({ bgColor }) => bgColor};
   gap: 0.125rem;
   justify-content: center;
   align-items: center;
@@ -45,9 +46,9 @@ const BackGround = styled.div<IBackgroundCardsProps>`
     width: 100%;
     height: 100%;
     background: linear-gradient(
-      ${({ bgColor }) => bgColor},
+      ${({ cardColor }) => cardColor},
       ${({ color }) => color},
-      ${({ bgColor }) => bgColor}
+      ${({ cardColor }) => cardColor}
     );
     animation: ${animate} 4s linear infinite;
   }
@@ -56,7 +57,7 @@ const BackGround = styled.div<IBackgroundCardsProps>`
     width: calc(5vw - 2px);
     height: calc(10vh - 2px);
     transition: 1.5s;
-    background-color: ${({ bgColor }) => bgColor};
+    background-color: ${({ cardColor }) => cardColor};
 
     &:hover {
       background-color: ${({ color }) => color};
