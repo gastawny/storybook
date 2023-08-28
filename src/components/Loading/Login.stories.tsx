@@ -1,17 +1,19 @@
-import { Story, Meta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import { ILoadingProps, Loading } from './index'
 
 export default {
   title: 'Components/Loading',
   component: Loading,
-} as Meta
+} as Meta<ILoadingProps>
 
-const Template: Story<ILoadingProps> = (args) => <Loading {...args} />
+type Story = StoryObj<typeof Loading>
 
-export const Default = Template.bind({})
-Default.args = {
-  colors: ['#e65c00', '#18b201', '#0456c8'],
-  bgColor: '#00000066',
-  textColor: '#fbfbfb',
-  text: 'Loading...',
+export const Default: Story = {
+  args: {
+    text: 'Loading...',
+    colors: ['#e65c00', '#18b201', '#0456c8'],
+    bgColor: '#00000066',
+    textColor: '#fbfbfb',
+    fontFamily: 'Verdana',
+  },
 }

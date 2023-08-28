@@ -7,19 +7,26 @@ export interface ILoadingProps {
   bgColor: string
   textColor: string
   text: string
+  fontFamily?: string
 }
 
-export const Loading = ({ colors, bgColor, textColor, text }: ILoadingProps) => (
-  <div className="fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center">
-    <div className="flex text-center items-center justify-center min-h-screen">
-      <Ring bgColor={bgColor} colors={colors} className="absolute w-56 h-56 rounded-full"></Ring>
-      <span style={{ color: textColor }} className="z-50 text-xl uppercase tracking-widest">
-        {text}
-      </span>
-    </div>
-  </div>
-)
+export function Loading({ colors, bgColor, textColor, text, fontFamily }: ILoadingProps) {
+  const font = fontFamily ? fontFamily : undefined
 
+  return (
+    <div className="fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center">
+      <div className="flex text-center items-center justify-center min-h-screen">
+        <Ring bgColor={bgColor} colors={colors} className="absolute w-56 h-56 rounded-full"></Ring>
+        <span
+          style={{ color: textColor, fontFamily: font }}
+          className="z-50 text-xl uppercase tracking-widest"
+        >
+          {text}
+        </span>
+      </div>
+    </div>
+  )
+}
 const ringAnimte = (colors: string[]) => keyframes`
   0% {
     transform: rotate(0deg);
