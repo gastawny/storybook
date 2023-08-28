@@ -7,7 +7,7 @@ import { UpDown } from './GeometricShapesSVG/Animations'
 const hiddenlowHeight = 1000
 const hiddenMediumHeight = 2000
 
-export function BackGroundSVG( { colors }: { colors: string[] } ) {
+export function BackGroundSVG({ colors }: { colors: string[] }) {
   const [height, setHeight] = useState(0)
 
   useEffect(() => {
@@ -20,7 +20,8 @@ export function BackGroundSVG( { colors }: { colors: string[] } ) {
         <SVG colors={colors} icon="triangle" width={4 * 48} stroke left="30%" top="30%" />
         <SVG colors={colors} icon="hexa" width={4 * 48} stroke left="65%" top="95%" />
         <SVG colors={colors} icon="hexa" width={4 * 48} stroke left="10%" top="5%" />
-        <SVG colors={colors}
+        <SVG
+          colors={colors}
           icon="box"
           width={4 * 28}
           stroke
@@ -28,7 +29,8 @@ export function BackGroundSVG( { colors }: { colors: string[] } ) {
           top="80%"
           hidden={hiddenlowHeight > height || hiddenMediumHeight > height ? true : false}
         />
-        <SVG colors={colors}
+        <SVG
+          colors={colors}
           icon="hexa"
           width={4 * 28}
           stroke
@@ -40,7 +42,8 @@ export function BackGroundSVG( { colors }: { colors: string[] } ) {
       </UpDown>
       <UpDown type="wide">
         <SVG colors={colors} icon="triangle" width={4 * 24} stroke left="65%" top="8%" />
-        <SVG colors={colors}
+        <SVG
+          colors={colors}
           icon="triangle"
           width={4 * 16}
           stroke
@@ -48,7 +51,8 @@ export function BackGroundSVG( { colors }: { colors: string[] } ) {
           top="60%"
           hidden={hiddenlowHeight > height || hiddenMediumHeight > height ? true : false}
         />
-        <SVG colors={colors}
+        <SVG
+          colors={colors}
           icon="triangle"
           width={4 * 16}
           stroke
@@ -62,14 +66,16 @@ export function BackGroundSVG( { colors }: { colors: string[] } ) {
       <UpDown type="slow">
         <SVG colors={colors} icon="box" width={4 * 16} stroke left="30%" top="0%" />
         <SVG colors={colors} icon="box" width={4 * 16} stroke left="10%" top="90%" />
-        <SVG colors={colors}
+        <SVG
+          colors={colors}
           icon="circle"
           width={4 * 20}
           left="85%"
           top="25%"
           hidden={hiddenlowHeight > height || hiddenMediumHeight > height ? true : false}
         />
-        <SVG colors={colors}
+        <SVG
+          colors={colors}
           icon="circle"
           width={4 * 20}
           left="65%"

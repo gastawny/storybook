@@ -12,5 +12,6 @@ export const Default = Template.bind({})
 Default.args = {
   children: 'Button',
   onClick: () => {},
-  className: 'w-[1.2rem] xl:w-[9.6rem] 2xl:w-[12rem] text-[1.2rem] xl:text-[1.28rem] 2xl:text-[1.6rem]',
+  className:
+    'w-[1.2rem] xl:w-[9.6rem] 2xl:w-[12rem] text-[1.2rem] xl:text-[1.28rem] 2xl:text-[1.6rem]',
 }
