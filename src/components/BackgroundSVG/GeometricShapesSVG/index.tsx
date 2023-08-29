@@ -31,7 +31,9 @@ export function GeometricShapesSVG({
         fill: stroke ? 'none' : 'currentColor',
         display: hidden ? 'none' : 'block',
         overflow: 'visible',
-        color: `${colors[Math.floor(Math.random() * 10)]}${Math.floor(Math.random() * 40) + 20}`,
+        color: `${colors[Math.floor(Math.random() * colors.length)]}${
+          Math.floor(Math.random() * 40) + 20
+        }`,
         zIndex,
         width,
         left,

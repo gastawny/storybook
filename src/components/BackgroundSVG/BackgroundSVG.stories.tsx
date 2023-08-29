@@ -23,6 +23,9 @@ export const Dark: Story = {
       '#573AFF',
       '#B0C4DE',
     ],
+    children: (
+      <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo excepturi explicabo,</>
+    ),
   },
 }
 
@@ -41,5 +44,8 @@ export const Light: Story = {
       '#573AFF',
       '#B0C4DE',
     ],
+    children: (
+      <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo excepturi explicabo,</>
+    ),
   },
 }
