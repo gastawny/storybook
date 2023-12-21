@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { AwareButton, AwareButtonProps } from './index'
 
 export default {
-  title: 'Components/AwareButton',
+  title: 'Button/AwareButton',
   component: AwareButton,
 } as Meta<AwareButtonProps>
 

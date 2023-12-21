@@ -1,0 +1,40 @@
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  color: inherit;
+  font-weight: 700;
+  cursor: pointer;
+
+  span {
+    text-align: left;
+  }
+
+  .d-arrow {
+    transition: 0.4s;
+  }
+
+  .d-arrow.rotate {
+    transform: rotate(180deg);
+  }
+}
+
+.p {
+  font-size: 1.25rem;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.show {
+  max-height: 100vh;
+  opacity: 1;
+  padding: 0 1rem 2rem 1rem;
+}

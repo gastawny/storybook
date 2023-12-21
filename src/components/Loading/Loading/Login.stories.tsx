@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 import { ILoadingProps, Loading } from './index'
 
 export default {
-  title: 'Components/Loading',
+  title: 'Loading/Loading',
   component: Loading,
 } as Meta<ILoadingProps>
 
