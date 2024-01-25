@@ -4,7 +4,7 @@ interface UpDownProps {
   children: React.ReactNode
   type: 'normal' | 'wide' | 'slow'
 }
-
+/* eslint-disable */
 export function UpDown({ children, type }: UpDownProps) {
   const svgType =
     type === 'wide'

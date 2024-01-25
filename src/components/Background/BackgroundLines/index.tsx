@@ -19,7 +19,7 @@ export interface IBackgroundLinesProps {
 export function BackgroundLines({ colors, children }: IBackgroundLinesProps) {
   const [lines, setLines] = useState<ILines[]>([])
 
-  const randomIndex = useCallback((array: any[]) => Math.floor(Math.random() * array.length), [])
+  const randomIndex = useCallback((array: string[]) => Math.floor(Math.random() * array.length), [])
 
   const createLine = useCallback(() => {
     const lineWidth = Math.random() * 12

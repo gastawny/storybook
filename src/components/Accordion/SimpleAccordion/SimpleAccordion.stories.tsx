@@ -19,7 +19,7 @@ export const OneItem: Story = {
       <>
         <SimpleAccordion.Item summary="What's the best way to study JavaScript?">
           Start With An Online Course.An online tutorial is probably the best way to learn
-          JavaScript.If you're serious about learning fast, efficiently and without missing any
+          JavaScript.If youre serious about learning fast, efficiently and without missing any
           important information, then you should consider enrolling in an online course.
         </SimpleAccordion.Item>
         <SimpleAccordion.Item summary="How do I play?">

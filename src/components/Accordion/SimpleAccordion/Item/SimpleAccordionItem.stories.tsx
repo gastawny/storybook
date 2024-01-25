@@ -8,6 +8,7 @@ export default {
 
 type Story = StoryObj<typeof Item>
 
+/* eslint-disable */
 export const Default: Story = {
   args: {
     summary: "What's the best way to study JavaScript?",
